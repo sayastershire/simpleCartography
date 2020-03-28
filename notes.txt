@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS map;
+CREATE TABLE map(
+    ID integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+    name varchar(100),
+    latitude decimal(10,5) NOT NULL,
+    longitude decimal(10,5) NOT NULL
+);
