@@ -1,11 +1,14 @@
-#include <sqlite3.h>
+constexpr int NODE_COUNT = 20;
 
 class map {
     private:
-        sqlite3 *mapDatabase;
-        double *adjacencyList;  // to be redefined later in a construtor
+        // Variables
+        double **adjacencyList;  // to be redefined later in a construtor
         char **name;
+        // Functions, such as parsing
+        double **parseAdjacencyList(char*);
     public:
-        map(char*);
+        map(char*, char*);
+        void printAdjacencyList();
         void cleanup();
 };
